@@ -114,7 +114,7 @@
             if (dino.y > 110) { dino.y = 110; dino.dy = 0; dino.grounded = true; }
 
             ctx.font = "32px Arial";
-            ctx.fillText("🦖", dino.x, dino.y + 25);
+            ctx.fillText("🦖", dino.x, dino.y + 15);
 
             score++;
             let s = Math.floor(score/8);
@@ -142,7 +142,7 @@
             obstacles.forEach((o, i) => {
                 o.x -= 6.5;
                 ctx.font = "30px Arial";
-                ctx.fillText("🌵", o.x, o.y + 22);
+                ctx.fillText("🌵", o.x, o.y + 12);
                 if (dino.x + 22 > o.x && dino.x < o.x + 18 && dino.y + 28 > o.y) {
                     score = 0; obstacles = [];
                 }
